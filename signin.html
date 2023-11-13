@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <!DOCTYPE html>
+
+    
+    <style>
+        body {
+            background-image: url('bg.png'); /* Replace 'sea_background.jpg' with the path to your sea background image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: rgb(228, 14, 14); /* Set text color to white for better visibility on a sea background */
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the last value (0.7) for the desired transparency level */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 400px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+    <h3>Sign In</h3>
+
+    <form action="/signin" method="post">
+    {% csrf_token %}
+    
+        <label for=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABD0lEQVRIS8VUAQ3CMBDcHICD4QAHgANQADgABQwFSEACOAAHgAImYQ7gjrQJe9Z+oTT75NKk3e7+/vvNs8SRJ+bPQgWGSGQOjIEecAXWQKUlGCIwBcneEEu+GTaOPhFNgNmeADpoixqbA4Bra2gCLAkFfOF1oQmswLxTBLY4L391wPofUjpgDy5AkaoH5HW5YGOXQNQtsonzFm0ANp1h54CrN7Qma/+r550KsMELYGSaLIetMqW6YS1dVlwOWGvef9cESz7bk7M8aBMgOe8+HXwbE/zQEJEC2tujCfLq9t8/kgIhT4Mm0ng6pABLw8GKCQ4eH8BXSIE79ooYdvzbKJMUeESSfyTe6aD9xUxyB0+1GSkZ0oyAxwAAAABJRU5ErkJggg=="/>Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" Required>
+        <br>
+
+        <label for=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA7klEQVRIS2NkoDFgpLH5DMRa4AB0SD4QKwCxABBfAOJGKI3XjcRYUAA0oR5qMLphhUCBCfhsIGSBAVDzfqgBIBcfAOIPQBwAxP1QcUeoOFZ7CFmwHmoYyPAGNBNAPgNZsgGIA3H5gpAF96HhrgikH6AZAoqL91AfCZJrwX+oRlwOISRPMBURMoCQ/MBYAEo584EYRJMCQCkMltLg+rCFLShZOpBiMpJaUEIAJQi8FsDClUw7UIMdmw9GLUAJldEgwpbSBj6IYCUoOfkAVNMZEspooFwMKioUSLQBVFQsBOIFhCwg0Vz8yglVOBRbBgAUDioZH1HJzwAAAABJRU5ErkJggg=="/>Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Enter your Password" Required>
+        <box-icon type='solid' name='lock-alt'></box-icon>
+        <br>
+
+        <button type="submit">Sign In</button>
+        <a href="{% url 'signup' %}">Don't Have an Account..? Register</a>
+    </center>
+
+        
+
+
+        
+    </form>
+    <footer>
+        <p>&copy; 2023 Kira. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
